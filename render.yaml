@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: hireexact-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm ci && npm run build
+    preDeployCommand: npm run migrate
+    initialDeployHook: npm run seed
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: hireexact-db
+          property: connectionString
+      - key: DATABASE_SSL
+        value: "true"
+      - key: PORT
+        value: "10000"
+      - key: CLIENT_ORIGIN
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: SEED_ADMIN_EMAIL
+        sync: false
+      - key: SEED_ADMIN_PASSWORD
+        sync: false
+
+databases:
+  - name: hireexact-db
+    plan: basic-256mb
+    diskSizeGB: 15
