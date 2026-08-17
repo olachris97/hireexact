@@ -1,0 +1,13 @@
+import React from 'react';
+import LegalPage from './LegalPage';
+export default function PrivacyPolicyPage() {
+  return <LegalPage eyebrow="Legal" title="Privacy Policy" intro="This Privacy Policy explains how HireExact Ltd may collect, use, disclose and protect information when you use the HireExact website and related services." sections={[
+    {title:"1. Information we collect", paragraphs:["We may collect information you provide directly, including your name, email address, phone number, company information, hiring requirements, booking details, talent application information and other information you choose to submit.","Technical information such as browser type, device information, IP address and basic usage information may also be processed by hosting, security or infrastructure services used to operate the website."]},
+    {title:"2. How we use information", bullets:["Provide and operate HireExact services, including talent discovery, interview requests and talent applications.","Communicate with you about requests, bookings, applications and support matters.","Secure and authenticate administrative accounts.","Improve the website and platform functionality.","Operate the AI Talent Matcher when you choose to use it.","Comply with applicable legal obligations and protect our users and services."]},
+    {title:"3. AI Talent Matcher", paragraphs:["Information submitted for AI matching may be processed by the AI service provider used by HireExact to generate a recommendation. AI-generated recommendations are assistance tools and are not guarantees of candidate suitability, performance or hiring outcomes."]},
+    {title:"4. Sharing information", paragraphs:["We may share information with service providers that help us operate hosting, databases, security, communications and AI functionality. We may also disclose information where required by law or reasonably necessary to protect our services, users or legal rights."]},
+    {title:"5. Security and retention", paragraphs:["We retain information for as long as reasonably necessary for service delivery, recordkeeping, dispute resolution and legal compliance. We use reasonable safeguards, but no internet transmission or storage system can be guaranteed completely secure."]},
+    {title:"6. Your choices and rights", paragraphs:["Depending on where you live, you may have rights to request access to, correction of, deletion of, or information about the processing of your personal information. Contact us using the details below."]},
+    {title:"7. Contact", paragraphs:["HireExact Ltd, 1500 N Grant St Ste C, Denver, CO 80203, United States. Support@hire-exact.com. +1 303-720-6109."]}
+  ]} />;
+}
