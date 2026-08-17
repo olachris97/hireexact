@@ -48,7 +48,7 @@ aiRouter.post("/match-talent", async (req, res) => {
     Provide a JSON response with: role summary, a wage bridge breakdown (US market avg vs HireExact avg, dollar and percentage savings, top regions), 3 realistic fictional candidate profiles (name, location, title, matchScore 90-99, hourly rate, annual salary, timezone, top skills, one-line bio highlight), and ROI advice.`;
 
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      model: "gemini-3.6-flash",
       contents: prompt,
       config: {
         responseMimeType: "application/json",
